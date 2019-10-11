@@ -1,0 +1,36 @@
+public class tinhToan {
+    public int chia(int a, int b)throws ArithmeticException{
+        if (b == 0){
+            throw new ArithmeticException("ném ra ngoài câu lệnh gọi nó");
+        }    
+    return a / b;
+    }
+}
+public class tinhToan {
+    public int chia(int a, int b){
+        if (b == 0){
+            throw new ArithmeticException("ném ra ngoài câu lệnh gọi nó");
+        }    
+    return a / b;
+    }
+}
+//Đã ném ra nhưng chưa được xữ lý
+    public static void main(String[] args) {
+        tinhToan tinh = new tinhToan();
+         tinh.chia(3, 0);
+    }
+//Ném ra chưa xử lý
+  public static void main(String[] args) {
+        tinhToan tinh = new tinhToan();
+         tinh.chia(3, 0);
+    }
+//Ném ra xử lý luôn
+  public static void main(String[] args) {
+
+        tinhToan tinh = new tinhToan();
+        try{
+              tinh.chia(3, 0);
+        }catch(ArithmeticException ar){
+            System.out.println("Lỗi chia cho 0");
+        }
+  }
